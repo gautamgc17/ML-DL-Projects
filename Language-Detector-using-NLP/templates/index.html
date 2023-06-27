@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Language Detector</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<style>
+		.heading{
+			font-size: 4em;
+			font-weight: 570;
+			color: darkblue;
+		}
+
+		.text_area {
+			background-color: whitesmoke;
+			border-radius: 40px;
+			padding: 100px;
+			color: rgb(19, 19, 19);
+			font-size: 20px;
+			border: 3px solid rgb(22, 22, 22);
+			box-shadow: 5px 5px 5px #696868;
+		}
+
+		.button {
+			position: relative;
+			padding: 10px 15px;
+			margin-top: 30px;
+			background-color: #000000;
+			cursor: pointer;
+			border-radius: 40px;
+			font-weight: bolder;
+			font-size: 20px;
+			border: 3px solid rgb(170, 170, 170);
+			color: rgb(138, 135, 135)
+		}
+
+		
+		.text{
+			text-align: center;
+			font-size: 40px;
+			color: royalblue;
+		}
+
+		.py-4{
+			margin-top: 32px;
+			background-color: silver;
+		}
+
+		.text-center a{
+			color: black;
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron">
+
+			<h1 class="heading"> Language Detection Using NLP </h1>
+			<p style="font-size: 20px; font-weight: 450;"> Enter a text to determine its Language..!! </p>
+		</div>
+		<br>
+
+
+		<form action="/" method="POST" autocomplete="" enctype="">
+
+			<textarea name="text" class="text_area" rows="2" cols="50" required="True"></textarea>
+			<br>
+			<input type="submit" name="" class="button" value="Detect Language">
+		</form>
+		<hr>
+		<br>
+
+		{% if pred_lang %}
+
+		    <p class="text"> <b> The above text is in <i> {{pred_lang}} </i> </b> </p>
+
+		{% endif %}
+
+		<br><br>
+
+		<footer id="sticky-footer" class="py-4" >
+        <div class="container text-center text-dark">
+          <a href="https://github.com/gautamgc17" target="_blank">Github | </a>
+          <a href="https://www.linkedin.com/in/gautam-chutani-2762171b9" target="_blank">Linkedin | </a>
+          <a href="#" target="_blank">Code </a>
+        </div>
+    </footer>
+		
+	</div>
+
+</body>
+</html>
+
+  
